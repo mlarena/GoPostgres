@@ -1,3 +1,1 @@
-
-Библиотека pq, является драйвером для PostgreSQL в Go
-go get github.com/lib/pq
+go run create_project.go myproject
