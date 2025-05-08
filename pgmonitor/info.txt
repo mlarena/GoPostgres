@@ -1,0 +1,24 @@
+pgmonitor/
+├── config/
+│   ├── config.yaml
+│   └── config.go
+├── internal/
+│   ├── collector/
+│   │   ├── collector.go
+│   │   ├── database.go
+│   │   ├── execution.go
+│   │   ├── locks.go
+│   │   ├── queries.go
+│   │   └── resources.go
+│   ├── models/
+│   │   └── models.go
+│   └── repository/
+│       └── repository.go
+├── pkg/
+│   ├── logger/
+│   │   └── logger.go
+│   └── utils/
+│       └── utils.go
+├── go.mod
+├── go.sum
+└── main.go

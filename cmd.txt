@@ -1,1 +1,5 @@
-go run create_project.go myproject
+go run create_project.go pgmonitor
+
+
+расширения на момент выполнения для каждой бд
+SELECT extname, extversion FROM pg_extension WHERE extname IN ('dblink', 'postgres_fdw');

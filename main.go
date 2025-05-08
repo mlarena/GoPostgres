@@ -123,9 +123,15 @@ func getDatabaseSizes() {
 
     // Запрос списка баз данных и их размеров
     rows, err := db.Query(`
-        SELECT datname AS db_name, pg_size_pretty(pg_database_size(datname)) AS db_size
-        FROM pg_database
-        ORDER BY pg_database_size(datname) DESC;
+     SELECT 
+        datname AS db_name,
+        pg_size_pretty(pg_database_size(datname)) AS size_pretty,
+        pg_database_size(datname) AS size_bytes,
+        datcollate AS db_collation,
+        datconnlimit AS connection_limit,
+        datallowconn AS connections_allowed
+    FROM 
+        pg_database;
     `)
     if err != nil {
         log.Fatalf("Error querying database sizes: %q", err)

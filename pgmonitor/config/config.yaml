@@ -1,0 +1,27 @@
+database:
+  workdb:
+    host: "localhost"
+    port: 5432
+    user: "postgres"
+    password: "12345678"
+    dbname: "workdb"
+    sslmode: "disable"
+  source:
+    host: "localhost"
+    port: 5432
+    user: "postgres"
+    password: "12345678"
+    dbname: "postgres"
+    sslmode: "disable"
+
+monitoring:
+  long_query_threshold: "5m"  # 5 minutes
+  check_interval: "1h"       # 1 hour
+  max_databases: 50          # Максимальное кол-во БД для мониторинга
+
+logging:
+  level: "info"              # debug, info, warn, error
+  path: "./logs"
+  max_size: 10               # MB
+  max_backups: 7             # дней
+  max_age: 30                # дней
